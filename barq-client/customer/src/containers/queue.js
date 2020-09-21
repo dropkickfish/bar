@@ -17,7 +17,7 @@ const Queue = forwardRef((props, ref) => {
     updatePage,
     clearOrder,
     isMenuOpen,
-    orderSpecialWishes,
+    orderTableNumber,
     updateStatus,
     barId,
   } = props;
@@ -40,7 +40,7 @@ const Queue = forwardRef((props, ref) => {
       orderId,
       status: orderStatus,
       items: order,
-      specialWishes: orderSpecialWishes,
+      tableNumber: orderTableNumber,
     });
     socket.on('STATUS_UPDATE', (newStatus) => {
       updateStatus(newStatus);

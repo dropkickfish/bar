@@ -75,7 +75,7 @@ class PaymentForm extends Component {
     return {
       stripe: {
         amount: Number((total * 100).toFixed(0)),
-        currency: 'eur',
+        currency: 'gbp',
         description: 'Drinks order',
         source: token.id,
         statement_descriptor: 'Drinks order',

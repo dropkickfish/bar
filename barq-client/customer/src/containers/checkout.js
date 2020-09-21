@@ -15,7 +15,7 @@ const Checkout = forwardRef((props, ref) => {
   const {
     order, total, updatePage, isMenuOpen, updateOrder,
   } = props;
-  const [specialWishes, setSpecialWishes] = useState('');
+  const [tableNumber, setTableNumber] = useState('');
   return (
     <div ref={ref} className="checkout">
       {
@@ -34,7 +34,7 @@ const Checkout = forwardRef((props, ref) => {
                   Total
                   <Price style={{ textAlign: 'right', fontSize: '1.25rem' }} price={total} />
                 </div>
-                <TextInput value={specialWishes} onChange={e => setSpecialWishes(e.target.value)} title="Special Wishes" />
+                <TextInput keyboardType = 'numeric' value={tableNumber} onChange={e => setTableNumber(e.target.value)} title="Table Number" />
               </div>
               <Footer
                 primaryButtonType={sumBy(order, 'quantity') > 0 ? 'success' : 'neutral'}
@@ -42,7 +42,7 @@ const Checkout = forwardRef((props, ref) => {
                 primaryButtonName={sumBy(order, 'quantity') > 0 ? 'Pay' : 'Nothing selected'}
                 onPrimaryClick={() => {
                   window.localStorage.setItem(props.barId, JSON.stringify({ items: order }));
-                  updateOrder({ specialWishes });
+                  updateOrder({ tableNumber });
                   isMenuOpen()
                     .then(isOpen => (isOpen ? updatePage('PAY') : updatePage('CLOSED')));
                 }}

@@ -6,7 +6,7 @@ const initialState = {
   tipRate: 0.05,
   orderId: null,
   status: '',
-  specialWishes: '',
+  tableNumber: '',
 };
 
 const items = (state = initialState.items, action) => {
@@ -48,13 +48,13 @@ const orderId = (state = initialState.orderId, action) => {
   }
 };
 
-const specialWishes = (state = initialState.specialWishes, action) => {
+const tableNumber = (state = initialState.tableNumber, action) => {
   switch (action.type) {
     case 'UPDATE_ORDER': {
-      return action.specialWishes || state;
+      return action.tableNumber || state;
     }
     case 'CLEAR_ORDER': {
-      return initialState.specialWishes;
+      return initialState.tableNumber;
     }
     default: {
       return state;
@@ -80,5 +80,5 @@ const status = (state = initialState.status, action) => {
 };
 
 export default combineReducers({
-  items, orderId, status, specialWishes,
+  items, orderId, status, tableNumber,
 });

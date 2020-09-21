@@ -8,7 +8,7 @@ const Display = ({ queue, history }) => {
       <h1>Ready for pickup</h1>
       {
         queue
-        .filter(order => order.status === 'ready for pickup')
+        .filter(order => order.status === 'on its way')
         .map(order => <h2>#{order.orderId}</h2>)
       }
     </div>

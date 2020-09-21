@@ -5,6 +5,7 @@ const StaffContainer = ({ barId, generateStaffCode, staffCode }) => {
     e.preventDefault();
     generateStaffCode(barId);
   };
+  const url = `http://localhost:3000/${barId}`;
   return (
     <div className="staffContainer">
 
@@ -14,6 +15,7 @@ const StaffContainer = ({ barId, generateStaffCode, staffCode }) => {
           Share your unique staff login code with your bar
           staff to log in to the bartender interface.
         </h3>
+        <h3>{url}</h3>
       </div>
 
       <div className="rightBarPoster">

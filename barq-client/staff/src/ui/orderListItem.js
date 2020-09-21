@@ -10,7 +10,7 @@ class OrderListItem extends Component  {
     expanded: false
   }
 
-  statusList = ['paid', 'in preparation', 'ready for pickup', 'delivered']
+  statusList = ['paid', 'in preparation', 'on its way', 'delivered']
   onButtonClick = (e) => {
     const index = this.statusList.findIndex(status => status === this.props.status)
     let nextIndex;
@@ -38,7 +38,7 @@ class OrderListItem extends Component  {
               return <div key={item._id} className="item">{item.name} x {item.quantity}</div>
             })
           }
-          <p>{this.props.specialWishes}</p>
+          <p>{this.props.tableNumber}</p>
           <button
             onClick={() => this.setState(state => ({ expanded: !state.expanded}))}
             className={`arrow-button${expanded ? '--expanded' : ''}`}

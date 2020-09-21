@@ -37,7 +37,7 @@ const Menu = forwardRef((props, ref) => {
                 }
               </div>
               <Footer
-                primaryButtonName={sumBy(order, 'quantity') > 0 ? `Checkout (${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(total)})` : 'Nothing Selected'}
+                primaryButtonName={sumBy(order, 'quantity') > 0 ? `Checkout (${new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(total)})` : 'Nothing Selected'}
                 primaryButtonType={sumBy(order, 'quantity') > 0 ? 'success' : 'neutral'}
                 primaryButtonClickable={sumBy(order, 'quantity') > 0}
                 onPrimaryClick={() => isMenuOpen()

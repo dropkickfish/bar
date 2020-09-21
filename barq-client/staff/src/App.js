@@ -37,7 +37,7 @@ class App extends Component {
    this.barId = window.location.pathname.replace(/\//g, '');
    const decoded = `${this.barId}:${this.state.pin}`
    const encoded = btoa(decoded);
-    axios.get(`/staff/${this.barId}/code`, {
+   axios.get(`/staff/${this.barId}/code`, {
       headers: {
         "Content-type": "application/json",
         Authorization: `Basic ${encoded}`

@@ -9,7 +9,7 @@ const mockOwner = async () => ({
   password: await bcrypt.hash('secret', 10),
   bars: [{
     name: 'Joe\'s Bar',
-    currency: 'EUR',
+    currency: 'GBP',
     _id: 'ebba12',
     history: [{
       _id: '5c9a16441d198b01e861c1f7',
