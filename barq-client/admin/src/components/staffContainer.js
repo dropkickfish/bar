@@ -6,7 +6,7 @@ const StaffContainer = ({ barId, generateStaffCode, staffCode }) => {
     e.preventDefault();
     generateStaffCode(barId);
   };
-  const url = `https://bit.ly/ts-cust/${barId}`;
+  const url = `https://bit.ly/ts-staff/${barId}`;
   return (
     <div className="staffContainer">
 
