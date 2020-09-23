@@ -37,7 +37,7 @@ class PaymentForm extends Component {
   }
 
   state = {
-    paid: false,
+    ordered: false,
     button: this.buttonStates.ready,
   };
 
@@ -66,11 +66,11 @@ class PaymentForm extends Component {
       if (!isOpen) return updatePage('CLOSED');
       const orderData = await this.createOrderData(total, order);
       const { data } = await axios.post(`/${barId}/pay`, orderData);
-      if (data.status === 'paid') {
+      if (data.status === 'ordered') {
         window.localStorage.setItem(barId, JSON.stringify(data));
         updateOrder(data);
         this.setState({
-          paid: true,
+          ordered: true,
           button: success,
         });
         updatePage('QUEUE');
@@ -97,7 +97,7 @@ class PaymentForm extends Component {
   render() {
     const {
       button: { title, type, clickable },
-      paid,
+      ordered,
     } = this.state;
     const { updatePage } = this.props;
     return (
@@ -122,8 +122,8 @@ class PaymentForm extends Component {
             primaryButtonName={title}
             primaryButtonType={type}
             primaryButtonClickable={clickable}
-            secondaryButtonName={paid ? null : 'Back'}
-            onSecondaryClick={paid ? null : () => updatePage('CHECKOUT')}
+            secondaryButtonName={ordered ? null : 'Back'}
+            onSecondaryClick={ordered ? null : () => updatePage('CHECKOUT')}
           />
         </form>
       </>

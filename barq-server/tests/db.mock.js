@@ -20,7 +20,7 @@ const mockOwner = async () => ({
         quantity: 3,
       }],
       total: 9,
-      status: 'paid',
+      status: 'ordered',
       timestamp: '2019-03-26T12:08:36.366Z',
       orderId: 1,
     }, {
@@ -32,7 +32,7 @@ const mockOwner = async () => ({
         quantity: 4,
       }],
       total: 12,
-      status: 'paid',
+      status: 'ordered',
       timestamp: '2019-03-26T12:13:06.579Z',
       orderId: 2,
     }, {
@@ -44,7 +44,7 @@ const mockOwner = async () => ({
         quantity: 3,
       }],
       total: 9,
-      status: 'paid',
+      status: 'ordered',
       timestamp: '2019-03-26T12:28:17.923Z',
       orderId: 3,
     }, {
@@ -61,7 +61,7 @@ const mockOwner = async () => ({
         quantity: 1,
       }],
       total: 15,
-      status: 'paid',
+      status: 'ordered',
       timestamp: '2019-03-26T13:37:43.380Z',
       orderId: 4,
     }],

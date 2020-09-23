@@ -28,7 +28,7 @@ export const pay = async (req, res) => {
     const nextOrderId = await getOrderId(barId);
     const confirmation = {
       ...order,
-      status: 'paid',
+      status: 'ordered',
       timestamp: new Date().toISOString(),
       orderId: nextOrderId,
     };
