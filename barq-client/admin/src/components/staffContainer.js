@@ -1,11 +1,12 @@
 import React from 'react';
+import QRCode from 'qrcode-react';
 
 const StaffContainer = ({ barId, generateStaffCode, staffCode }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     generateStaffCode(barId);
   };
-  const url = `http://localhost:3000/${barId}`;
+  const url = `https://bit.ly/ts-cust/${barId}`;
   return (
     <div className="staffContainer">
 
@@ -15,6 +16,7 @@ const StaffContainer = ({ barId, generateStaffCode, staffCode }) => {
           Share your unique staff login code with your bar
           staff to log in to the bartender interface.
         </h3>
+        <QRCode value={url} />
         <h3>{url}</h3>
       </div>
 
