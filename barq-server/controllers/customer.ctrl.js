@@ -23,16 +23,12 @@ export const getMenu = async (req, res) => {
 
 export const pay = async (req, res) => {
   const { barId } = req.params;
-  const { stripe, order } = req.body;
+  const { order } = req.body;
   try {
-    await stripeAccount.charges.create(stripe);
-    const total = order.items.reduce((acc, el) => acc + el.price * el.quantity, 0);
-
     const nextOrderId = await getOrderId(barId);
     const confirmation = {
       ...order,
       status: 'paid',
-      total,
       timestamp: new Date().toISOString(),
       orderId: nextOrderId,
     };

@@ -3,8 +3,6 @@ import React from 'react';
 import MenuContainer from './menuContainer';
 import StaffContainer from './staffContainer';
 import BarPoster from './barPoster';
-import OrderHistory from './orderHistory';
-import PaymentDetails from './paymentDetails';
 
 const BarDetails = ({
   data, addMenu, deleteMenu, activateMenu, generateStaffCode, staffCode, updateIban, refreshHistory,
@@ -25,15 +23,6 @@ const BarDetails = ({
         barId={data._id}
         generateStaffCode={generateStaffCode}
         staffCode={staffCode}
-      />
-      <PaymentDetails
-        barId={data._id}
-        iban={data.iban}
-        updateIban={updateIban}
-      />
-      <OrderHistory
-        history={data.history}
-        refreshHistory={refreshHistory}
       />
     </div>
   </div>

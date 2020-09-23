@@ -11,14 +11,9 @@ import Loader from '../../ui/loader';
 import Footer from '../../ui/footer';
 
 class PaymentForm extends Component {
-  readyCounter = 0;
+  readyCounter = 3;
 
   buttonStates = {
-    loading: {
-      title: 'Loading',
-      clickable: false,
-      type: 'neutral',
-    },
     paying: {
       title: 'Paying...',
       clickable: false,
@@ -41,45 +36,13 @@ class PaymentForm extends Component {
     },
   }
 
-  createOptions = {
-    style: {
-      base: {
-        fontSize: '16px',
-        color: 'white',
-        letterSpacing: '0.025em',
-        fontFamily: 'Source Code Pro, monospace',
-        '::placeholder': {
-          color: '#aab7c4',
-        },
-      },
-      invalid: {
-        color: '#EA0E48',
-      },
-    },
-  };
-
   state = {
     paid: false,
-    button: this.buttonStates.loading,
+    button: this.buttonStates.ready,
   };
 
-  getStripeToken = async () => {
-    const { stripe } = this.props;
-    const { token } = await stripe.createToken({ name: 'test' });
-    if (!token) throw new Error('Failed');
-    return token;
-  }
-
-  createOrderData = async (total, order) => {
-    const token = await this.getStripeToken();
+  createOrderData = async (order) => {
     return {
-      stripe: {
-        amount: Number((total * 100).toFixed(0)),
-        currency: 'gbp',
-        description: 'Drinks order',
-        source: token.id,
-        statement_descriptor: 'Drinks order',
-      },
       order: {
         items: order,
       },
@@ -147,43 +110,14 @@ class PaymentForm extends Component {
           className={`pay__form${title === 'Loading' ? '--invisible' : ''}`}
           onSubmit={this.handleSubmit}
         >
-          <div className="pay__stripe" />
-          <div className="pay__info">
-            <div className="pay__top">
-              <label className="pay__number">
-                Card number
-                <CardNumberElement
-                  onBlur={this.handleBlur}
-                  onChange={this.handleChange}
-                  onFocus={this.handleFocus}
-                  onReady={this.handleReady}
-                  {...this.createOptions}
-                />
-              </label>
-            </div>
-            <div className="pay__bottom">
-              <label className="pay__cvc">
-                CVC
-                <CardCVCElement
-                  onBlur={this.handleBlur}
-                  onChange={this.handleChange}
-                  onFocus={this.handleFocus}
-                  onReady={this.handleReady}
-                  {...this.createOptions}
-                />
-              </label>
-              <label className="pay__expiry">
-                Expiry date
-                <CardExpiryElement
-                  onBlur={this.handleBlur}
-                  onChange={this.handleChange}
-                  onFocus={this.handleFocus}
-                  onReady={this.handleReady}
-                  {...this.createOptions}
-                />
-              </label>
-            </div>
+
+          <div>
+            <br></br>
+            <p>Your order will be submitted to the bar, and placed in a queue. Once you hit submit, you can view your order progress on your phone</p> 
+            <br></br>
+            <p>Please have your debit or credit card ready for the server when they arrive.</p>
           </div>
+
           <Footer
             primaryButtonName={title}
             primaryButtonType={type}

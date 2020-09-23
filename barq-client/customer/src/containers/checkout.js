@@ -39,7 +39,7 @@ const Checkout = forwardRef((props, ref) => {
               <Footer
                 primaryButtonType={sumBy(order, 'quantity') > 0 ? 'success' : 'neutral'}
                 primaryButtonClickable={sumBy(order, 'quantity') > 0}
-                primaryButtonName={sumBy(order, 'quantity') > 0 ? 'Pay' : 'Nothing selected'}
+                primaryButtonName={sumBy(order, 'quantity') > 0 ? 'Submit order' : 'Nothing selected'}
                 onPrimaryClick={() => {
                   window.localStorage.setItem(props.barId, JSON.stringify({ items: order }));
                   updateOrder({ tableNumber });

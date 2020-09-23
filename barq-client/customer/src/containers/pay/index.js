@@ -8,7 +8,7 @@ import '../../styles/containers/pay.css';
 
 const Pay = forwardRef((props, ref) => (
   <div ref={ref} className="pay">
-    <SecondaryHead title="Payment" />
+    <SecondaryHead title="Information" />
     <Elements>
       <InjectedPaymentForm
         {...props}

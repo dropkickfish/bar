@@ -10,7 +10,7 @@ class OrderListItem extends Component  {
     expanded: false
   }
 
-  statusList = ['paid', 'in preparation', 'on its way', 'delivered']
+  statusList = ['Paid', 'On its way', 'Delivered']
   onButtonClick = (e) => {
     const index = this.statusList.findIndex(status => status === this.props.status)
     let nextIndex;
