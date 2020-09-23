@@ -45,8 +45,9 @@ class OrderListItem extends Component  {
           ></button>
         </div>
         <button name='update' onClick={this.onButtonClick} className="wrapper-status">
-          <p>Update</p>
+          <p>Current status</p>
           <p>{this.props.status}</p>
+          <p>Tap to update</p>
         </button>
       </div>
     );
