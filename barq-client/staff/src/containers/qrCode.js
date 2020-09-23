@@ -3,7 +3,7 @@ import QRCode from 'qrcode-react';
 import '../styles/qrcode.css';
 
 class QrCode extends Component {  
-  QRCode_URL = `${process.env.REACT_APP_BASE_URL}:${process.env.REACT_APP_PORT}/${this.props.barId}`
+  QRCode_URL = `https://bit.ly/ts-cust/${data._id}`
   render() {
     return (
       <div className="qrcode">
