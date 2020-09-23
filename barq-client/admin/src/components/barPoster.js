@@ -3,7 +3,7 @@ import QRCode from 'qrcode-react';
 import Popup from 'reactjs-popup';
 
 const BarPoster = ({ data }) => {
-  const url = `https://bit.ly/ts-cust/${data._id}`;
+  const url = `https://bit.ly/ts-cust`;
   return (
     <div className="barPoster">
 
