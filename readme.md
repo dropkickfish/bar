@@ -25,6 +25,8 @@ If you have time, you should also ELI5 what I need to do to fix things/update th
 
 Make an admin panel, have multiple users, run it for many different pubs using the same admin login. Alternatively, run one bar upstairs, one bar downstairs, one food menu, and a different menu of your choosing, each with the same admin login but different QR codes.
 
+![Admin view](/chrome_DsPMtqMMXQ.png)
+
 (Remember when I said I should have used ENV variables? If you're smarter than I am, use them here)
 
 Menus are a simple CSV upload. You can create QR codes for your customers, or even your staff if you want. If you look at the original, there's some Stripe and IBAN stuff in there.
@@ -37,9 +39,13 @@ Please don't rinse the linked bars or QR codes in the image. I'm redundant and p
 
 View past orders, view current orders, update them even. You can even block the bar and prevent new orders from happening. Madness.
 
+![Staff queue](chrome_v59ZqUHk9v.png)
+
 ## Customer view
 
 Scan a QR code, view the menu, place an order, watch the progress of your drink. Do it again until kicking out time.
+
+![Menu](chrome_RX9MCZl0IF.png)![On it's way](chrome_fUSBqE67El.png)
 
 ## Docker
 
@@ -48,7 +54,6 @@ It's a thing I barely understand. I can't believe I managed to host it somewhere
 # Disclaimer
 I bodged this together to make it work hopefully well enough that someone more experienced can make use of it, hopefully while keeping the same spirit of this being as open source as possible so that the good folk in the hospitality industry don't have to spend too much to keep us fed and watered.
 
-This was originally a project from [Felix Weinberger](https://github.com/felixweinberger)'s Bar-Q repository. Thank you Felix for the intro by fire to React and Docker, and for making it available on the MIT license.
+This was originally a project by [Felix Weinberger](https://github.com/felixweinberger)'s Bar-Q repository. Thank you Felix for the intro by fire to React and Docker, and for making it available on the MIT license.
 
-I do plan on eventually submitting a PR to the original repo's, but I regrettably have very little free time right now and have fallen into the bad git habits of someone that has only ever considered personal projects.
-
+I do plan on eventually submitting a PR to the original repo's, but I regrettably have very little free time right now and have fallen into the bad git habits of someone that has only ever considered personal projects. Please either badger me to do so, or do a much better job of it.
