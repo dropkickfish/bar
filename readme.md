@@ -4,7 +4,7 @@ MIT license React App for table service, bodged together from [Felix Weinberger]
 # Why is this
 I stumbled upon the [original Bar-Q](https://github.com/felixweinberger/barq-server) in the early days of the pandemic and figured that it might help some of the independent pubs near me in providing socially distanced table service, and hopefully help me to learn React and Docker. 
 
-My end goal is to learn enough that I can eventually provide this as an MIT License based project to allow smaller bars to compete with chain breweries that often have their own IT teams and are more able to adapt to the technical needs of social distancing measures. I want to make this as close to free as possible.
+My end goal is to learn enough that I can eventually provide this as an MIT License based project to allow smaller bars to compete with chain breweries, which often have their own IT teams and are more able to adapt to the technical needs of social distancing measures. I want to make this as close to free as possible.
 
 # What I've done so far
 I originally just updated some dependencies and a few other things that have skipped my mind (no PRs since I was working with this offline for the majority of the time, I just straight cloned it - bad excuse for skimming through learning git).
