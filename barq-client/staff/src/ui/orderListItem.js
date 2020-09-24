@@ -32,13 +32,14 @@ class OrderListItem extends Component  {
           Back
         </button>
         <div className={`wrapper-list${expanded ? '--expanded' : ''}`}>
-          <h2>#{this.props.orderId}</h2> 
+          <h2>Order: {this.props.orderId}</h2> 
+          <p>Table: {this.props.tableNumber}</p>
           {
             this.props.items.map(item => {
               return <div key={item._id} className="item">{item.name} x {item.quantity}</div>
             })
           }
-          <p>{this.props.tableNumber}</p>
+
           <button
             onClick={() => this.setState(state => ({ expanded: !state.expanded}))}
             className={`arrow-button${expanded ? '--expanded' : ''}`}
