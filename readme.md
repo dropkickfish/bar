@@ -4,20 +4,18 @@ MIT license React App for table service, bodged together from [Felix Weinberger]
 # Why is this
 I stumbled upon the [original Bar-Q](https://github.com/felixweinberger/barq-server) in the early days of the pandemic and figured that it might help some of the independent pubs near me in providing socially distanced table service, and hopefully help me to learn React and Docker. 
 
-My end goal is to learn enough that I can eventually provide this as an MIT License based project to allow smaller bars to compete with chain breweries, which often have their own IT teams and are more able to adapt to the technical needs of social distancing measures. I want to make this as close to free as possible.
+My end goal is to learn enough that I can eventually provide this as an MIT License based project to allow smaller bars to compete with chain breweries, which often have their own IT teams and are more able to adapt to the technical needs of social distancing measures. I want to make this as close to free as possible, and will be conducting trials with local bars in the coming weeks in order to gauge the most cost effective hosting method.
 
 # What I've done so far
-I originally just updated some dependencies and a few other things that have skipped my mind (no PRs since I was working with this offline for the majority of the time, I just straight cloned it - bad excuse for skimming through learning git).
+I originally just updated some dependencies and a few other things that have skipped my mind, and a PR on the original project is pending.
 
-I've pressed forwards making this table service only. There are many things that should be ENV variables. I do not understand Docker as much as I should. 
+I've pressed forwards making this app table service only, but plan to implement a better UI for this. 
 
 I have a backup of the original app complete with card payment functionality that will be uploaded to GitHub soon, but I'm focussing on the table service aspect right now since this is what my local bars need. This means that some of the underlying card payment functionality is still in this code, and that it is more than likely even more inefficient than when I "fixed" it.
 
 # What needs to be done
 
-Anyone vaguely competent should take this and adapt it, improve it, and share it so that smaller businesses don't fall behind. In doing this you should continue to be excellent to each other.
-
-If you have time, you should also ELI5 what I need to do to fix things/update the license/make this less bodged together.
+I plan to improve the table service UI and strip back any more code which is now ubiquitous (looking at you Stripe payments). I also need to implement ENV vars.
 
 # What can you do with this
 
@@ -55,5 +53,3 @@ It's a thing I barely understand. I can't believe I managed to host it somewhere
 I bodged this together to make it work hopefully well enough that someone more experienced can make use of it, hopefully while keeping the same spirit of this being as open source as possible so that the good folk in the hospitality industry don't have to spend too much to keep us fed and watered.
 
 This was originally a project by [Felix Weinberger](https://github.com/felixweinberger)'s Bar-Q repository. Thank you Felix for the intro by fire to React and Docker, and for making it available on the MIT license.
-
-I do plan on eventually submitting a PR to the original repo's, but I regrettably have very little free time right now and have fallen into the bad git habits of someone that has only ever considered personal projects. Please either badger me to do so, or do a much better job of it.
