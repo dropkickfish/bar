@@ -11,11 +11,13 @@ I originally just updated some dependencies and a few other things that have ski
 
 I've pressed forwards making this app table service only, but plan to implement a better UI for this. 
 
-I have a backup of the original app complete with card payment functionality that will be uploaded to GitHub soon, but I'm focussing on the table service aspect right now since this is what my local bars need. This means that some of the underlying card payment functionality is still in this code, and that it is more than likely even more inefficient than when I "fixed" it.
+I have a backup of the original app complete with card payment functionality that will be uploaded to GitHub soon, but I'm focussing on the table service aspect right now since this is what my local bars need. This means that some of the underlying card payment functionality is still in this code, and that it may be even more inefficient than when I "fixed" it.
 
 # What needs to be done
 
 I plan to improve the table service UI and strip back any more code which is now ubiquitous (looking at you Stripe payments). I also need to implement ENV vars.
+
+I'd also like to add limited UI customisation options to the dashboard when I get chance so that bars can add their own branding.
 
 # What can you do with this
 
@@ -29,9 +31,7 @@ Make an admin panel, have multiple users, run it for many different pubs using t
 
 Menus are a simple CSV upload. You can create QR codes for your customers, or even your staff if you want. If you look at the original, there's some Stripe and IBAN stuff in there.
 
-You can get new login codes every time you load the staff bar so that dodgy Dave who sits behind the bar doesn't keep queueing his beer up first.
-
-Please don't rinse the linked bars or QR codes in the image. I'm redundant and probably hosting this in a suboptimal way. Don't bankrupt me.
+You can get new login codes every time you load the staff bar so that dodgy Dave who sits next to the bar doesn't keep queueing his beer up first.
 
 ## Staff view
 
@@ -47,7 +47,7 @@ Scan a QR code, view the menu, place an order, watch the progress of your drink.
 
 ## Docker
 
-It's a thing I barely understand. I can't believe I managed to host it somewhere apart from localhost and made it work. You will probably know what to do with this, or your IT guy will.
+Ready for a Docker based deployment.
 
 # Disclaimer
 I bodged this together to make it work hopefully well enough that someone more experienced can make use of it, hopefully while keeping the same spirit of this being as open source as possible so that the good folk in the hospitality industry don't have to spend too much to keep us fed and watered.
